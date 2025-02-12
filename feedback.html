@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Feedback Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 2rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #ca3c8f;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .optional-label::after {
+            content: " (Optional)";
+            color: #6b7280;
+            font-weight: normal;
+            font-size: 0.9em;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.2s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="tel"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color:  #ca3c8f;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .rating-group {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 0.5rem;
+        }
+
+        .rating-group input[type="radio"] {
+            margin-right: 0.25rem;
+        }
+
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        button {
+            background-color: #ca3c8f;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color:  #ca3c8f;
+        }
+
+        /* Error state styling */
+        .error {
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        input:invalid:not(:placeholder-shown) + .error {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Feedback Form</h1>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name" class="optional-label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="optional-label">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+                <span class="error">Please enter a valid email address</span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="optional-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label>Rating</label>
+                <div class="rating-group">
+                    <input type="radio" id="rating1" name="rating" value="1" required>
+                    <label for="rating1">1</label>
+                    
+                    <input type="radio" id="rating2" name="rating" value="2">
+                    <label for="rating2">2</label>
+                    
+                    <input type="radio" id="rating3" name="rating" value="3">
+                    <label for="rating3">3</label>
+                    
+                    <input type="radio" id="rating4" name="rating" value="4">
+                    <label for="rating4">4</label>
+                    
+                    <input type="radio" id="rating5" name="rating" value="5">
+                    <label for="rating5">5</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="questions">Questions about our Product/Service</label>
+                <textarea id="questions" name="questions" placeholder="Enter your questions here" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comments" class="optional-label">Additional Comments</label>
+                <textarea id="comments" name="comments" placeholder="Enter any additional comments"></textarea>
+            </div>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</body>
+</html>
