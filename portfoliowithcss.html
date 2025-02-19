@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.Divya - Portfolio</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --text-color: #1f2937;
+            --bg-light: #f3f4f6;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-light);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            list-style: none;
+        }
+
+        .skill-tag {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .project {
+            margin-bottom: 2rem;
+        }
+
+        .project h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--secondary-color);
+        }
+
+        .achievements-list {
+            list-style: none;
+        }
+
+        .achievements-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .achievements-list li::before {
+            content: "🏆";
+            position: absolute;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="hero-title">V.Divya</h1>
+        <p class="hero-subtitle">Full Stack Developer | AI/ML Enthusiast | Problem Solver</p>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Hello! I'm V.Divya, a passionate developer with a unique blend of expertise in Web Development, LLMs, and AI solutions. My journey in technology is driven by curiosity and a desire to create impactful solutions that make a difference.</p>
+                <p style="margin-top: 1rem">I thrive on challenges and constantly push myself to learn new technologies. My experience ranges from building responsive web applications to developing sophisticated AI solutions. I believe in writing clean, efficient code and creating user-centric applications.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Technical Expertise</h2>
+            <div class="skills-list">
+                <span class="skill-tag">React Native</span>
+                <span class="skill-tag">MERN Stack</span>
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">LLM Development</span>
+                <span class="skill-tag">RAG Fine-tuning</span>
+                <span class="skill-tag">Firebase</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">Jenkins</span>
+                <span class="skill-tag">Git</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Featured Projects</h2>
+            <div class="grid">
+                <div class="card project">
+                    <h3>MechAi - AI Car Mechanic Chatbot</h3>
+                    <p>An innovative chatbot leveraging advanced LLM technology to provide instant, accurate automotive diagnostic assistance and maintenance recommendations.</p>
+                    <p style="margin-top: 1rem">
+                        <a href="https://github.com/22BD1A059X/mechanicAI/tree/main/Documents/HelloWo">View on GitHub →</a>
+                    </p>
+                </div>
+                <div class="card project">
+                    <h3>Automatic drug dispensary</h3>
+                    <p>A full-featured platform built with the MERN stack, featuring real-time prescription handling and email sending to the patient i.e QR code</p>
+                    <p style="margin-top: 1rem">
+                        <a href="https://github.com/22BD1A059X/Automatic-drug-dispenser/tree/master">View on GitHub →</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Achievements & Recognition</h2>
+            <ul class="achievements-list">
+                <li>Secured a remarkable rank of 9000 in TSEAMCET, demonstrating strong academic excellence</li>
+                <li>Successfully developed and deployed an LLM-powered chatbot using RAG and Firebase, serving real users</li>
+                <li>Actively contributing to open-source projects in the AI/ML community</li>
+                <li>Demonstrated expertise in modern web technologies through multiple successful project deployments</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="card">
+                <h3>Keshav Memorial Institute of Technology</h3>
+                <p>Bachelor of Technology</p>
+                <p>Focusing on Computer Science and Engineering with specialization in AI/ML</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Let's Connect</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:vuduthadivya05@gmail.com"> Contact Email</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <span>+91 9347XXXXXX</span>
+                </div>
+                <div class="contact-item">
+                    <span>💻</span>
+                    <a href="https://github.com/22BD1A059X">GitHub Profile</a>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <a href="https://linkedin.com/in/vuduthaDivya">LinkedIn Profile</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
